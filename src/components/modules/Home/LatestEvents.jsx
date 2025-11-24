@@ -1,13 +1,13 @@
 export const LatestEvents = () => {
   return (
-    <div className="ml-2">
-      <section className="flex gap-1 w-full ps-2 font-black items-center text-sm text-white overflow-x-auto animate-blink mt-0 md:mt-1 custom-scrollbar pb-[4px]">
+    <div className="">
+      <section className="flex gap-1 w-full ps-1 font-black items-center text-sm text-white overflow-x-auto animate-blink mt-0 md:mt-1 custom-scrollbar pb-[4px]">
         <div className="flex flex-col gap-x-1 p-[2px] rounded w-auto items-center bg-primary cursor-pointer hover:underline">
           <div className="flex items-center gap-1 pr-[3px]">
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -27,7 +27,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -47,7 +47,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -67,7 +67,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -87,7 +87,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -107,7 +107,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -127,7 +127,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -147,7 +147,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -167,7 +167,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -187,7 +187,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/ball-icon-black-D0x1QcFu.svg"
+                src="/src/assets/img/ball-icon-black-D0x1QcFu.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -207,7 +207,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/football-icon-DKauPYdm.svg"
+                src="/src/assets/img/football-icon-DKauPYdm.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -227,7 +227,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/football-icon-DKauPYdm.svg"
+                src="/src/assets/img/football-icon-DKauPYdm.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -247,7 +247,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/football-icon-DKauPYdm.svg"
+                src="/src/assets/img/football-icon-DKauPYdm.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -267,7 +267,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/football-icon-DKauPYdm.svg"
+                src="/src/assets/img/football-icon-DKauPYdm.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />
@@ -287,7 +287,7 @@ export const LatestEvents = () => {
             <div className="w-3 animate-pulse-fast">
               <img
                 loading="lazy"
-                src="assets/football-icon-DKauPYdm.svg"
+                src="/src/assets/img/football-icon-DKauPYdm.svg"
                 alt="ball-icon"
                 className="object-contain invert h-5 w-5"
               />

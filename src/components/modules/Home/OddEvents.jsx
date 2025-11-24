@@ -116,6 +116,8 @@ export const OddEvents = ({ homeTab }) => {
                   .map((key, index) => {
                     return (
                       <tr
+                        style={{ cursor: "pointer" }}
+                        onClick={() => navigateGameList(key)}
                         key={index + key}
                         className="border-b text-xs text-center"
                       >

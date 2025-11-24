@@ -1,6 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home/Home";
+import EventDetails from "../pages/EventDetails/EventDetails";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 
 export const router = createBrowserRouter(
   [
@@ -13,7 +17,23 @@ export const router = createBrowserRouter(
           index: true,
           element: <Home />,
         },
+        {
+          path: "/event-details/:eventTypeId/:eventId",
+          element: <EventDetails />,
+        },
       ],
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/forgot-password",
+      element: <ForgotPassword />,
     },
   ],
   {

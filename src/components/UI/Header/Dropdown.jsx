@@ -1,0 +1,61 @@
+import { useDispatch } from "react-redux";
+import { logout } from "../../../redux/features/auth/authSlice";
+
+const Dropdown = () => {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+  return (
+    <div
+      className="bg-white h-auto w-44 z-[999] absolute origin-top-right right-0 rounded-md border border-gray1"
+      style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 4px 0px" }}
+    >
+      <div className="flex flex-col gap-1 py-2">
+        <div className="flex flex-wrap w-full sm:hidden sm:flex-nowrap">
+          <div className="flex flex-col items-center justify-center gap-1 text-xs p-1 bg-primary border-[2px] border-[grey] font-bold whitespace-nowrap cursor-pointer shadow-md transition-transform duration-300 overflow-hidden w-full">
+            <p>Check your Bonuses 💰😍</p>
+            <button className=" border-none px-[10px] py-[3px] rounded cursor-pointer transition-colors duration-200 hover:bg-blue-500 hover:animate-none blink-red-black">
+              Claim Now
+            </button>
+          </div>
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Account Statement
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Profit Loss Report
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Deposit Turnover
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Promotions
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Bet History
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          My wallet
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Stake Settings
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Language
+        </div>
+        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+          Rules
+        </div>
+        <div
+          onClick={handleLogout}
+          className="text-red1 border-t px-2 pt-2 border-gray1 cursor-pointer hover:underline"
+        >
+          Logout
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dropdown;

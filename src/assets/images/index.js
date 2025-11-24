@@ -25,7 +25,6 @@ import affiBonus2 from "../img/affi-bonus-2.b3bc4c43.svg";
 import cricket from "../img/4.png";
 import football from "../img/1.png";
 import tennis from "../img/2.png";
-
 import greyhoundRacing from "../img/4339.png";
 import binary from "../img/99990.png";
 import politicks from "../img/2378961.png";
@@ -38,8 +37,14 @@ import martial from "../img/26420387.png";
 import darts from "../img/3503.png";
 import fustal from "../img/29.png";
 import voleyBall from "../img/998917.png";
+import horseRacing from "../img/7.png";
+import androidIcon from "../img/android-icon-D53Y-iMY.svg";
+import deposit from "../img/Deposit-DfccxVuh.svg";
 
 export default {
+  deposit,
+  androidIcon,
+  horseRacing,
   affiBonus1,
   affiBonus2,
   affiCopy,
