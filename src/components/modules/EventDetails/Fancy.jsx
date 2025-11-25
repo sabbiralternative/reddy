@@ -243,7 +243,7 @@ const Fancy = ({ data }) => {
                               </td>
                             </tr>
                             {game?.id === runnerId && (
-                              <tr className="inline-betslip">
+                              <tr className="inline-betslip md:hidden">
                                 <td colSpan="12">
                                   <BetSlip />
                                 </td>

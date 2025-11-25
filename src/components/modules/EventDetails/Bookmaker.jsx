@@ -493,7 +493,7 @@ const Bookmaker = ({ data }) => {
                           </td>
                         </tr>
                         {runner?.id === runnerId && (
-                          <tr className="inline-betslip">
+                          <tr className="inline-betslip md:hidden">
                             <td colSpan="3">
                               <BetSlip />
                             </td>
