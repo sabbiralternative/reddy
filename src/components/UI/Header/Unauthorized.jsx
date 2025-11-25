@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Unauthorized = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-center gap-3 w-full overflow-x-auto overflow-y-hidden">
       <div className="flex gap-5 items-center self-end text-base md:mr-[10px] leading-none whitespace-nowrap text-white">
@@ -15,7 +16,10 @@ const Unauthorized = () => {
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <div className="self-stretch my-auto w-auto font-bold cursor-pointer">
+          <div
+            onClick={() => navigate("/rules")}
+            className="self-stretch my-auto w-auto font-bold cursor-pointer"
+          >
             Rules
           </div>
         </div>

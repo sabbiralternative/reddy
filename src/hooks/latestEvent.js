@@ -8,7 +8,6 @@ export const useLatestEvent = () => {
     queryFn: async () => {
       const res = await AxiosSecure.post(API.latestEvents, { type: "cup" });
       const data = res.data;
-
       if (data?.success) {
         return data?.result;
       }

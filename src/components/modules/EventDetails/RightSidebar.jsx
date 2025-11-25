@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
+import BetSlip from "./BetSlip";
+
 const RightSidebar = () => {
+  const { placeBetValues } = useSelector((state) => state.event);
   return (
-    <div className="relative w-full">
+    <div className="relative w-full hidden md:block">
       <div className="flex flex-col gap-2 relative w-[340px] z-50">
         <div className="recent-game flex flex-row justify-end items-center min-h-8 w-full mb-[0px] bg-primary">
           <div className="flex items-center cursor-pointer">
@@ -33,6 +37,7 @@ const RightSidebar = () => {
           <div className="bg-primary h-fit text-nowrap rounded px-2 py-1 text-white">
             Place Bet
           </div>
+          {placeBetValues && <BetSlip />}
         </div>
         <div className="w-full">
           <div className="bg-primary h-fit text-nowrap rounded px-2 py-1 text-white">

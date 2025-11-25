@@ -5,6 +5,8 @@ import EventDetails from "../pages/EventDetails/EventDetails";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
+import StakeSetting from "../pages/StakeSetting/StakeSetting";
+import Rules from "../pages/Rules/Rules";
 
 export const router = createBrowserRouter(
   [
@@ -20,6 +22,14 @@ export const router = createBrowserRouter(
         {
           path: "/event-details/:eventTypeId/:eventId",
           element: <EventDetails />,
+        },
+        {
+          path: "/stake-setting",
+          element: <StakeSetting />,
+        },
+        {
+          path: "/rules",
+          element: <Rules />,
         },
       ],
     },

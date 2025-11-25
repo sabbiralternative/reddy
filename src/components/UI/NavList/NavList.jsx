@@ -1,6 +1,6 @@
 export const NavList = () => {
   return (
-    <nav className="sm:flex w-full text-sm font-black leading-none text-center uppercase text-white custom-scrollbar">
+    <nav className="hidden sm:flex w-full text-sm font-black leading-none text-center uppercase text-white custom-scrollbar">
       <div className="flex md:py-2 bg-secondary sm:bg-primary w-full overflow-auto cursor-pointer">
         <div className="relative">
           <a

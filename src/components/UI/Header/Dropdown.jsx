@@ -1,10 +1,17 @@
 import { useDispatch } from "react-redux";
 import { logout } from "../../../redux/features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
 
-const Dropdown = () => {
+const Dropdown = ({ setDropdown }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(logout());
+  };
+
+  const handleNavigate = (link) => {
+    navigate(link);
+    setDropdown(null);
   };
   return (
     <div
@@ -38,13 +45,19 @@ const Dropdown = () => {
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           My wallet
         </div>
-        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+        <div
+          onClick={() => handleNavigate("/stake-setting")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
           Stake Settings
         </div>
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           Language
         </div>
-        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+        <div
+          onClick={() => handleNavigate("/rules")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
           Rules
         </div>
         <div

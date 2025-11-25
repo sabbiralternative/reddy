@@ -1,4 +1,8 @@
+// import { useLatestEvent } from "../../../hooks/latestEvent";
+
 export const LatestEvents = () => {
+  // const { data } = useLatestEvent();
+
   return (
     <div className="">
       <section className="flex gap-1 w-full ps-1 font-black items-center text-sm text-white overflow-x-auto animate-blink mt-0 md:mt-1 custom-scrollbar pb-[4px]">

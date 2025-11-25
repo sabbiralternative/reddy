@@ -10,6 +10,7 @@ import { Settings } from "../../../api";
 import { handleCashOutPlaceBet } from "../../../utils/handleCashoutPlaceBet";
 import { Status } from "../../../const";
 import { cn } from "../../../utils/cn";
+import BetSlip from "./BetSlip";
 
 const Bookmaker = ({ data }) => {
   const navigate = useNavigate();
@@ -293,16 +294,78 @@ const Bookmaker = ({ data }) => {
                       (val) => val?.id === runner?.id
                     );
                     return (
-                      <tr
-                        key={runner?.id}
-                        className="relative justify-between pr-6 mt-2 w-full pl-2 h-[32px] border-b border-white"
-                      >
-                        <td className="my-auto text-[14px] font-bold bg-gray5 px-2 flex-[6]">
-                          <div> {runner?.name}</div>
-                          <div />
-                        </td>
-                        <td>
-                          <div className="flex overflow-hidden border-r border-white gap-[1px] web-view ">
+                      <Fragment key={runner?.id}>
+                        <tr className="relative justify-between pr-6 mt-2 w-full pl-2 h-[32px] border-b border-white">
+                          <td className="my-auto text-[14px] font-bold bg-gray5 px-2 flex-[6]">
+                            <div> {runner?.name}</div>
+                            <div />
+                          </td>
+                          <td>
+                            <div className="flex overflow-hidden border-r border-white gap-[1px] web-view ">
+                              <div
+                                onClick={() =>
+                                  handleBetSlip(
+                                    "back",
+                                    game,
+                                    runner,
+                                    runner?.back?.[0]?.price
+                                  )
+                                }
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-sky1 py-1 w-full h-full">
+                                    {runner?.back?.[0]?.price}
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                onClick={() =>
+                                  handleBetSlip(
+                                    "back",
+                                    game,
+                                    runner,
+                                    runner?.back?.[1]?.price
+                                  )
+                                }
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-sky1 py-1 w-full h-full">
+                                    {runner?.back?.[1]?.price}
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                onClick={() =>
+                                  handleBetSlip(
+                                    "back",
+                                    game,
+                                    runner,
+                                    runner?.back?.[2]?.price
+                                  )
+                                }
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-sky1 opacity-50 py-1 w-full h-full">
+                                    {runner?.back?.[2]?.price}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                             <div
                               onClick={() =>
                                 handleBetSlip(
@@ -312,89 +375,89 @@ const Bookmaker = ({ data }) => {
                                   runner?.back?.[0]?.price
                                 )
                               }
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
+                              className="mob-view "
                             >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-sky1 py-1 w-full h-full">
-                                  {runner?.back?.[0]?.price}
+                              <div
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-sky1 opacity-50 py-1 w-full h-full">
+                                    {runner?.back?.[0]?.price}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div
-                              onClick={() =>
-                                handleBetSlip(
-                                  "back",
-                                  game,
-                                  runner,
-                                  runner?.back?.[1]?.price
-                                )
-                              }
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
-                            >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-sky1 py-1 w-full h-full">
-                                  {runner?.back?.[1]?.price}
+                          </td>
+                          <td className="relative">
+                            <div className="flex gap-[1px] web-view ">
+                              <div
+                                onClick={() =>
+                                  handleBetSlip(
+                                    "lay",
+                                    game,
+                                    runner,
+                                    runner?.lay?.[0]?.price
+                                  )
+                                }
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-pink1 opacity-50 py-1 w-full h-full">
+                                    {runner?.lay?.[0]?.price}
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                onClick={() =>
+                                  handleBetSlip(
+                                    "lay",
+                                    game,
+                                    runner,
+                                    runner?.lay?.[1]?.price
+                                  )
+                                }
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-pink1 py-1 w-full h-full">
+                                    {runner?.lay?.[1]?.price}
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                onClick={() =>
+                                  handleBetSlip(
+                                    "lay",
+                                    game,
+                                    runner,
+                                    runner?.lay?.[2]?.price
+                                  )
+                                }
+                                className={cn(
+                                  "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-pink1 py-1 w-full h-full">
+                                    {runner?.lay?.[1]?.price}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div
-                              onClick={() =>
-                                handleBetSlip(
-                                  "back",
-                                  game,
-                                  runner,
-                                  runner?.back?.[2]?.price
-                                )
-                              }
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
-                            >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-sky1 opacity-50 py-1 w-full h-full">
-                                  {runner?.back?.[2]?.price}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            onClick={() =>
-                              handleBetSlip(
-                                "back",
-                                game,
-                                runner,
-                                runner?.back?.[0]?.price
-                              )
-                            }
-                            className="mob-view "
-                          >
-                            <div
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
-                            >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-sky1 opacity-50 py-1 w-full h-full">
-                                  {runner?.back?.[0]?.price}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="relative">
-                          <div className="flex gap-[1px] web-view ">
                             <div
                               onClick={() =>
                                 handleBetSlip(
@@ -404,95 +467,39 @@ const Bookmaker = ({ data }) => {
                                   runner?.lay?.[0]?.price
                                 )
                               }
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
+                              className="mob-view  "
                             >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-pink1 opacity-50 py-1 w-full h-full">
-                                  {runner?.lay?.[0]?.price}
+                              <div
+                                className={cn(
+                                  "flex flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
+                                  runner?.status === Status.SUSPENDED &&
+                                    "disabled"
+                                )}
+                              >
+                                <div className="flex-1 w-full h-full">
+                                  <div className="flex items-center justify-center bg-pink1 opacity-50 py-1 w-full h-full">
+                                    {runner?.lay?.[0]?.price}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div
-                              onClick={() =>
-                                handleBetSlip(
-                                  "lay",
-                                  game,
-                                  runner,
-                                  runner?.lay?.[1]?.price
-                                )
-                              }
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
-                            >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-pink1 py-1 w-full h-full">
-                                  {runner?.lay?.[1]?.price}
-                                </div>
+                            {runner?.status === Status.SUSPENDED && (
+                              <div className="absolute top-0 right-0 w-[10.2rem] sm:w-[30.5rem]  h-[35px] flex items-center justify-center bg-suspendedBgBlack z-10">
+                                <span className="text-suspendedTextRed font-bold uppercase">
+                                  Suspended
+                                </span>
                               </div>
-                            </div>
-                            <div
-                              onClick={() =>
-                                handleBetSlip(
-                                  "lay",
-                                  game,
-                                  runner,
-                                  runner?.lay?.[2]?.price
-                                )
-                              }
-                              className={cn(
-                                "flex  flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
-                            >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-pink1 py-1 w-full h-full">
-                                  {runner?.lay?.[1]?.price}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            onClick={() =>
-                              handleBetSlip(
-                                "lay",
-                                game,
-                                runner,
-                                runner?.lay?.[0]?.price
-                              )
-                            }
-                            className="mob-view  "
-                          >
-                            <div
-                              className={cn(
-                                "flex flex-col h-8 market-btn-h items-center market-btn-w w-20 max-md:flex-1",
-                                runner?.status === Status.SUSPENDED &&
-                                  "disabled"
-                              )}
-                            >
-                              <div className="flex-1 w-full h-full">
-                                <div className="flex items-center justify-center bg-pink1 opacity-50 py-1 w-full h-full">
-                                  {runner?.lay?.[0]?.price}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          {runner?.status === Status.SUSPENDED && (
-                            <div className="absolute top-0 right-0 w-[10.2rem] sm:w-[30.5rem]  h-[35px] flex items-center justify-center bg-suspendedBgBlack z-10">
-                              <span className="text-suspendedTextRed font-bold uppercase">
-                                Suspended
-                              </span>
-                            </div>
-                          )}
-                        </td>
-                      </tr>
+                            )}
+                          </td>
+                        </tr>
+                        {runner?.id === runnerId && (
+                          <tr className="inline-betslip">
+                            <td colSpan="3">
+                              <BetSlip />
+                            </td>
+                          </tr>
+                        )}
+                      </Fragment>
                     );
                   })}
                 </tbody>

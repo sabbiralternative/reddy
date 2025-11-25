@@ -9,6 +9,7 @@ import CricketScoreCard from "../../components/modules/EventDetails/CricketScore
 import MatchOdds from "../../components/modules/EventDetails/MatchOdds";
 import Bookmaker from "../../components/modules/EventDetails/Bookmaker";
 import Fancy from "../../components/modules/EventDetails/Fancy";
+import MobileOddMatchBetTab from "../../components/modules/EventDetails/MobileOddMatchBetTab";
 
 const EventDetails = () => {
   const { eventTypeId, eventId } = useParams();
@@ -131,6 +132,7 @@ const EventDetails = () => {
             <div className=" ">
               <div className="flex font-robotoCondensed ">
                 <div className="relative g:w-[200%] w-full md:px-1 ">
+                  <MobileOddMatchBetTab />
                   <EventName data={data} />
                   <div>
                     <CricketScoreCard />
