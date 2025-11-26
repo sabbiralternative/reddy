@@ -27,23 +27,51 @@ const Dropdown = ({ setDropdown }) => {
             </button>
           </div>
         </div>
-        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+        <div
+          onClick={() => handleNavigate("/account-statement")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
           Account Statement
         </div>
-        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+        <div
+          onClick={() => handleNavigate("/profit-loss-report")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
           Profit Loss Report
         </div>
+        <div
+          onClick={() => handleNavigate("/deposit-report")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
+          Deposit Report
+        </div>
+        <div
+          onClick={() => handleNavigate("/withdraw-report")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
+          Withdraw Report
+        </div>
+
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           Deposit Turnover
         </div>
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           Promotions
         </div>
-        <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
+        <div
+          onClick={() => handleNavigate("/bet-history")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
           Bet History
         </div>
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           My wallet
+        </div>
+        <div
+          onClick={() => handleNavigate("/bonus-statement")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
+          Bonus Statement
         </div>
         <div
           onClick={() => handleNavigate("/stake-setting")}

@@ -7,6 +7,12 @@ import Register from "../pages/Register/Register";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 import StakeSetting from "../pages/StakeSetting/StakeSetting";
 import Rules from "../pages/Rules/Rules";
+import AccountStatement from "../pages/AccountStatement/AccountStatement";
+import BonusStatement from "../pages/BonusStatement/BonusStatement";
+import DepositReport from "../pages/DepositReport/DepositReport";
+import WithdrawReport from "../pages/WithdrawReport/WithdrawReport";
+import ProfitLossReport from "../pages/ProfitLossReport/ProfitLossReport";
+import BetHistory from "../pages/BetHistory/BetHistory";
 
 export const router = createBrowserRouter(
   [
@@ -30,6 +36,30 @@ export const router = createBrowserRouter(
         {
           path: "/rules",
           element: <Rules />,
+        },
+        {
+          path: "/account-statement",
+          element: <AccountStatement />,
+        },
+        {
+          path: "/bonus-statement",
+          element: <BonusStatement />,
+        },
+        {
+          path: "/deposit-report",
+          element: <DepositReport />,
+        },
+        {
+          path: "/withdraw-report",
+          element: <WithdrawReport />,
+        },
+        {
+          path: "/profit-loss-report",
+          element: <ProfitLossReport />,
+        },
+        {
+          path: "/bet-history",
+          element: <BetHistory />,
         },
       ],
     },
