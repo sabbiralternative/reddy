@@ -40,8 +40,22 @@ import voleyBall from "../img/998917.png";
 import horseRacing from "../img/7.png";
 import androidIcon from "../img/android-icon-D53Y-iMY.svg";
 import deposit from "../img/Deposit-DfccxVuh.svg";
+import dashboard from "../img/dashboard-ft.02d913bd.svg";
+import graph from "../img/graph-ft.01703183.svg";
+import userList from "../img/user-list-ft.ad2d77b8.svg";
+import calendar from "../img/affi-calendar.57b07b6a.svg";
+import commission from "../img/affi-commision-icon.ddf556a3.svg";
+import user from "../img/affi-user-icn.b08f83a6.svg";
+import share from "../img/af-share-img.51df8801.svg";
 
 export default {
+  share,
+  calendar,
+  commission,
+  user,
+  dashboard,
+  graph,
+  userList,
   deposit,
   androidIcon,
   horseRacing,

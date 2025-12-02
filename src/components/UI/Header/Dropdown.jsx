@@ -64,6 +64,12 @@ const Dropdown = ({ setDropdown }) => {
         >
           Bet History
         </div>
+        <div
+          onClick={() => handleNavigate("/affiliate")}
+          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+        >
+          Affiliate
+        </div>
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           My wallet
         </div>

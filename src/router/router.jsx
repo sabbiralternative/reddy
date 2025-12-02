@@ -13,6 +13,7 @@ import DepositReport from "../pages/DepositReport/DepositReport";
 import WithdrawReport from "../pages/WithdrawReport/WithdrawReport";
 import ProfitLossReport from "../pages/ProfitLossReport/ProfitLossReport";
 import BetHistory from "../pages/BetHistory/BetHistory";
+import Affiliate from "../pages/Affiliate/Affiliate";
 
 export const router = createBrowserRouter(
   [
@@ -60,6 +61,10 @@ export const router = createBrowserRouter(
         {
           path: "/bet-history",
           element: <BetHistory />,
+        },
+        {
+          path: "/affiliate",
+          element: <Affiliate />,
         },
       ],
     },
