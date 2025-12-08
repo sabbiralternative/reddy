@@ -1,8 +1,10 @@
 import { useDispatch } from "react-redux";
 import { logout } from "../../../redux/features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import useWhatsApp from "../../../hooks/whatsapp";
 
 const Dropdown = ({ setDropdown }) => {
+  const { data: socialLink } = useWhatsApp();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogout = () => {
@@ -13,6 +15,7 @@ const Dropdown = ({ setDropdown }) => {
     navigate(link);
     setDropdown(null);
   };
+
   return (
     <div
       className="bg-white h-auto w-44 z-[999] absolute origin-top-right right-0 rounded-md border border-gray1"
@@ -64,12 +67,15 @@ const Dropdown = ({ setDropdown }) => {
         >
           Bet History
         </div>
-        <div
-          onClick={() => handleNavigate("/affiliate")}
-          className="text-black1 text-sm px-2 cursor-pointer hover:underline "
-        >
-          Affiliate
-        </div>
+        {socialLink?.referral && (
+          <div
+            onClick={() => handleNavigate("/affiliate")}
+            className="text-black1 text-sm px-2 cursor-pointer hover:underline "
+          >
+            Affiliate
+          </div>
+        )}
+
         <div className="text-black1 text-sm px-2 cursor-pointer hover:underline ">
           My wallet
         </div>
